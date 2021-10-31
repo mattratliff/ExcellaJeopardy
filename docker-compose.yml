@@ -1,0 +1,36 @@
+version: "3"
+services:     
+  db:
+    image: postgres
+    container_name: jeopardy_db
+    ports:
+      - "5432:5432"
+      - "15432:5432"
+    environment:
+      - POSTGRES_DB=jeopardy
+      - PORT=5432
+  server:
+    build: api
+    container_name: api
+    environment:
+      - DATABASE_URL=postgres://postgres@db/jeopardy
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    volumes:
+      - ./api:/app
+    links:
+      - db
+    depends_on:
+      - db
+  client:
+    build: client
+    container_name: client
+    ports:
+      - "8100:8100"
+      - "80:8100"
+    environment:
+      - PORT=8100
+    volumes:
+      - ./client:/app
