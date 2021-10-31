@@ -53,6 +53,19 @@ Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully cu
 
 ### Front-end
 
-To run just the front-end app:
+To run just the front-end app navigate to the "client" folder and run 'ionic serve'
 
-'''ionic serve'''
+### Back-end
+
+To run just the back-end expres server, navigate to the "api" folder and run 'npm start'
+
+### Through Docker
+
+A total of three containers are created: db, api, and client.  Use the docker cli to interact with the containers.
+
+docker-compose up -d
+
+### Accessing the database
+
+You can use the postgres app to connect to the db container, or you can use the postgres cli (psql) with the Docker cli to connect to the container and run psql commands
+
