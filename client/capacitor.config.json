@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "jeopardy",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

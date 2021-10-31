@@ -49,3 +49,10 @@ Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully cu
 - The host can terminate the game early, or wait until all of the questions have been attempted.
 - When game play ends the players are transported to the game summary page which lists the players, their ranking, and the points earned.
 
+## Running the app
+
+### Front-end
+
+To run just the front-end app:
+
+'''ionic serve'''
