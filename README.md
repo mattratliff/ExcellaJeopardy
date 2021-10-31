@@ -1,6 +1,6 @@
-# Excella Jeopardy
+# Jeopardy App
 
-Excella Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully customizable including the categories, questions, and points assigned.
+Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully customizable including the categories, questions, and points assigned.
 
 ## Features
 
