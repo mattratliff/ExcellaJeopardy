@@ -4,12 +4,12 @@ Excella Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is 
 
 ## Features
 
-1. Administrator management section allows for fully customization of board and game play
-2. Using push notifications, both players and the host receive real-time gameplay notifications as well as session management notifications
-3. Players join a game by enter a session code generate by the host when creating a new gameplay session.
-4. Points are managed by the system, keeping track of the number of points earned by each player.
-5. A game summary is presented at the end of the game identifying the ranking of the players (leaderboard)
-6. The host can choose to have players verbally answer questions or choose an answer using their app.
+- Administrator management section allows for fully customization of board and game play
+- Using push notifications, both players and the host receive real-time gameplay notifications as well as session management notifications
+- Players join a game by enter a session code generate by the host when creating a new gameplay session.
+- Points are managed by the system, keeping track of the number of points earned by each player.
+- A game summary is presented at the end of the game identifying the ranking of the players (leaderboard)
+- The host can choose to have players verbally answer questions or choose an answer using their app.
 
 ## Tech stack
 
