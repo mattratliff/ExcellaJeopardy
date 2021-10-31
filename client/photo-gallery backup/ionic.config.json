@@ -1,7 +1,0 @@
-{
-  "name": "jeopardy",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
