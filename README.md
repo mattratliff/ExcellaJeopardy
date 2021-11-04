@@ -49,6 +49,18 @@ Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully cu
 - The host can terminate the game early, or wait until all of the questions have been attempted.
 - When game play ends the players are transported to the game summary page which lists the players, their ranking, and the points earned.
 
+## Installation
+
+1. Install Docker
+2. Install Node
+3. > docker-compose up -d   (creates and run installs on the containers)
+4. Create your database
+> dc exec db bash
+> psql -U postgres
+> create database nameofyourdb;
+> \q
+(Update config/config.json, and docker-compose.yml to reflect the name of your database)
+
 ## Running the app
 
 ### Using Docker  (recommended)
