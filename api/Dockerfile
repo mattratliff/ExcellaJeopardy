@@ -1,7 +1,7 @@
  # Create image based on the official Node 6 image from the dockerhub
 FROM node:17-alpine as api
 
-RUN apt update && apt install -y postgresql-client
+RUN npm update && npm install -y postgresql-client
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Create a directory where our app will be placed
