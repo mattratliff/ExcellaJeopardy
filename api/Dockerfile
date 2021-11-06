@@ -1,33 +1,20 @@
  # Create image based on the official Node 6 image from the dockerhub
 FROM node:17-alpine as api
 
-RUN npm update && npm install -y postgresql-client
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+# Create app directory
+WORKDIR /usr/src/app
 
-# Create a directory where our app will be placed
-RUN mkdir -p /app
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-# Change directory so that our commands run inside this new directory
-WORKDIR /app
-
-# Copy dependency definitions
-COPY package.json /app
-
-# Install dependecies
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
 
-# Get all the code needed to run the app
-COPY . /app
+# Bundle app source
+COPY . .
 
-# Expose the port the app runs in
-EXPOSE 8000
-EXPOSE 5432
-
-RUN cd /app
-
-CMD ["npm", "start"]
-
-# Serve the app
-# ADD ./docker-entrypoint.sh /
-# RUN chmod 755 /docker-entrypoint.sh
-# CMD ["/docker-entrypoint.sh"]
+EXPOSE 8080
+CMD [ "node", "server.js" ]

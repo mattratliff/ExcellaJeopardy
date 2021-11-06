@@ -73,11 +73,11 @@ Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully cu
 
 To run just the front-end app:
 
-> ionic serve
+```ionic serve```
 
 #### Back-end (stand-alone)
 
-> npm start
+```npm start```
 
 Note: webpack automatically scans for updates and transpiles for real-time updates to the front-end
 
@@ -87,6 +87,18 @@ You can use the PgAdmin app and connect to the database container or you can run
 
 ### Using PgAdmin
 
+### Using Docker CLI
+
+#### Logging into the server container
+```docker-compose exec ui bash```
+
+#### Log into Local DB and query:
+```
+docker-compose exec db bash
+psql -U postgres
+postgres> \c jeopardy
+jeopardy> select * from users;
+```
 
 ## Debugging
 
@@ -94,7 +106,3 @@ Issue: listen tcp 0.0.0.0:5432: bind: address already in use
 Resolution:
 > sudo lsof -i :5432
 > sudo kill <PID>
-
-
-
-### Using PG cli
