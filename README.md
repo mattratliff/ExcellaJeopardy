@@ -17,7 +17,8 @@ Jeopardy is a mobile-friendly app that emulates a Jeopardy game.  It is fully cu
 - Front-end: React
 - Back-end: Node/Express
 - Push notifications: Pusher.js
-- ORM: GraphQL
+- GraphQL
+- ORM: Sequelize
 - Database: PostGres
 - Dockerized
 
@@ -93,16 +94,15 @@ You can use the PgAdmin app and connect to the database container or you can run
 ```docker-compose exec ui bash```
 
 #### Log into Local DB and query:
-```
-docker-compose exec db bash
-psql -U postgres
-postgres> \c jeopardy
-jeopardy> select * from users;
-```
+
+```docker-compose exec db bash```
+```psql -U postgres```
+```postgres> \c jeopardy```
+```jeopardy> select * from users;```
 
 ## Debugging
 
 Issue: listen tcp 0.0.0.0:5432: bind: address already in use
 Resolution:
-> sudo lsof -i :5432
-> sudo kill <PID>
+```sudo lsof -i :5432```
+```sudo kill <PID>```

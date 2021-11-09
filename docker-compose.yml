@@ -8,11 +8,11 @@ services:
       - "15432:5432"
     environment:
       - POSTGRES_DB=jeopardy
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD=postgres
       - PORT=5432
   server:
-    build: api
-    container_name: jeopardy_api
+    build: server
+    container_name: jeopardy_server
     environment:
       - DATABASE_URL=postgres://postgres@db/jeopardy
     ports:
@@ -20,7 +20,7 @@ services:
     environment:
       - PORT=8000
     volumes:
-      - ./api:/app
+      - ./server:/app
     links:
       - db
     depends_on:
